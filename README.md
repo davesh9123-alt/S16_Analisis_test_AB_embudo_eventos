@@ -12,7 +12,8 @@ Tenemos una tarea analítica para una tienda en línea internacional. Nuestros p
 - Audiencia: 15% de los nuevos usuarios de la región de la UE
 - Número previsto de participantes de la prueba: 6 000
 
-**Propósito de la prueba**: probar cambios relacionados con la introducción de un sistema de recomendaciones mejorado
+**Propósito de la prueba**: probar cambios relacionados con la introducción de un sistema de recomendaciones mejorado.
+
 **Resultado esperado**: dentro de los 14 días posteriores a la inscripción, los usuarios mostrarán una mejor conversión en vistas de la página del producto (el evento `product_page`), instancias de agregar artículos al carrito de compras (`product_cart`) y compras (`purchase`). En cada etapa del embudo `product_page → product_cart → purchase`, habrá **al menos un 10% de aumento**.
 
 ## Habilidades Tecnológicas Utilizadas
