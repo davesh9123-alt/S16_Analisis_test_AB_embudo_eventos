@@ -1,6 +1,8 @@
 # Proyecto: Nuevo embudo de pago - Analisis de pruebas A/B
 
-Tenemos una tarea analítica para una tienda en línea internacional. Nuestros predecesores no consiguieron completarla: lanzaron una prueba A/B y luego abandonaron (para iniciar una granja de sandías en Brasil). Solo nos dejaron las especificaciones técnicas y los resultados de las pruebas.
+El objetivo de este proyecto fue analizar dos versiones del embudo de pago de una tienda online internacional (anonima) para evaluar si la nueva version produce una mejor conversion.
+
+(Nuestros predecesores no consiguieron completarla: lanzaron una prueba A/B y luego abandonaron (para iniciar una granja de sandías en Brasil). Solo nos dejaron las especificaciones técnicas y los resultados de las pruebas.)
 
 **Descripción técnica**
 
