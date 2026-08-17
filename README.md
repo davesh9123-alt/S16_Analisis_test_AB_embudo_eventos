@@ -70,7 +70,7 @@ El numero de eventos que suceden por día nos da información sobre la actividad
 <img width="1247" height="545" alt="eventos_por_dia_output" src="https://github.com/user-attachments/assets/b281cbaa-bbec-415e-8a3e-f8d86fbe74b4" />
 
 
-## Evaluación de resultados de la prueba A/B
+## Paso4 - Evaluación de resultados de la prueba A/B
 
 Anteriormente durante el análisis exploratorio descubrimos que las muestras de los grupos A y B no estan distribuidos equilibradamente, lo cual simplemente pudo ser un error de distribucion. Sin embargo despues detectamos que hay usuarios que están en ambos grupos, lo cual crea un problema muy grave ya que contamina la validez de la prueba. Entonces, para tratar de solucionar ese problema pensamos que la mejor solucion es eliminar los registros de esos usuarios duplicados, con el fin de tener datos experimentales lo mas limpios posible.
 
@@ -79,7 +79,7 @@ Anteriormente durante el análisis exploratorio descubrimos que las muestras de 
 <img width="1238" height="699" alt="conversion_datos_limpios_output" src="https://github.com/user-attachments/assets/1537b8ab-a05c-4bbe-a721-e9800e21194d" />
 
 
-## Conclusiones
+## Paso 5 - Conclusiones
 
 El proposito de la prueba fue probar los cambios relacionados con la introduccion de un sistema de recomendaciones mejorado. Se esperaban resultados de al menos un 10 % en cada etapa del embudo. Sin embargo las pruebas estadisticas no mostraron mejoras significativas. Tambien es probable que se hayan comprometido la validez de los datos de las pruebas pues encontramos usuarios que experimentaron ambas versiones del embudo, es decir, la nueva version del sistema de recomendacion y la version anterior. Aunque los usuarios de la prueba superaban los 6,000 participantes en ambos grupos y los usuarios que estaban en ambos grupos solo era 441, quiza porcion fue suficiente para alterar los resultados en el periodo de tiempo que se tomaron las pruebas. De cualquier forma lo que podemos asegurar es que la mejora esperada en las tasas de conversión no fue alcanzada.
 
