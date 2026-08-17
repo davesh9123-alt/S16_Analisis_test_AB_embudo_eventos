@@ -1,6 +1,6 @@
 # Proyecto: Nuevo embudo de pago - Análisis de pruebas A/B
 
-ste proyecto fue un analisis para una tienda en línea internacional (anonima). El objetivo fue probar la eficacia de una nueva versión del Embudo de Pago, en concreto que busco verificar si el nuevo embudo genera al menos un 10% mas de conversión que el embudo anterior.
+Este proyecto fue un analisis para una tienda en línea internacional (anonima). El objetivo fue probar la eficacia de una nueva versión del Embudo de Pago, en concreto que busco verificar si el nuevo embudo genera al menos un 10% mas de conversión que el embudo anterior.
 
 **Objetivo:** Mediante un análisis de pruebas A/B, verificar si el nuevo embudo de pago genera al menos un 10% mas de conversión por etapa.
 
