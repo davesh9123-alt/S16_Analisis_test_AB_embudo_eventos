@@ -70,7 +70,7 @@ El numero de eventos que suceden por día nos da información sobre la actividad
 <img width="1247" height="545" alt="eventos_por_dia_output" src="https://github.com/user-attachments/assets/b281cbaa-bbec-415e-8a3e-f8d86fbe74b4" />
 
 
-## Paso4 - Evaluación de resultados de la prueba A/B
+## Paso 4 - Evaluación de resultados de la prueba A/B
 
 Anteriormente durante el análisis exploratorio descubrimos que las muestras de los grupos A y B no estan distribuidos equilibradamente, lo cual simplemente pudo ser un error de distribucion. Sin embargo despues detectamos que hay usuarios que están en ambos grupos, lo cual crea un problema muy grave ya que contamina la validez de la prueba. Entonces, para tratar de solucionar ese problema pensamos que la mejor solucion es eliminar los registros de esos usuarios duplicados, con el fin de tener datos experimentales lo mas limpios posible.
 
