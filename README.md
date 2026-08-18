@@ -1,8 +1,8 @@
 # Proyecto: Nuevo embudo de pago - Análisis de pruebas A/B
 
-Este proyecto fue un analisis para una tienda en línea internacional (anonima). El objetivo fue probar la eficacia de una nueva versión del Embudo de Pago, en concreto que busco verificar si el nuevo embudo genera al menos un 10% mas de conversión que el embudo anterior.
+Este proyecto fue un analisis para una tienda en línea internacional (anonima). El objetivo fue probar la eficacia de una nueva versión del Embudo de Pago, en concreto se busco verificar si el nuevo embudo genera al menos un 10% mas de conversión que el embudo anterior.
 
-**Objetivo:** Mediante un análisis de pruebas A/B, verificar si el nuevo embudo de pago genera al menos un 10% mas de conversión por etapa.
+**Objetivo:** Mediante un análisis de pruebas A/B, verificar si el nuevo embudo de pago genera al menos un 10% mas de conversión en cada etapa del embudo.
 
 **Descripción técnica**
 
@@ -14,9 +14,8 @@ Este proyecto fue un analisis para una tienda en línea internacional (anonima).
 - Audiencia: 15% de los nuevos usuarios de la región de la UE
 - Número previsto de participantes de la prueba: 6 000
 
-**Propósito de la prueba**: probar cambios relacionados con la introducción de un sistema de recomendaciones mejorado.
+**Propósito de la prueba**: Probar cambios relacionados con la introducción de un sistema de recomendaciones mejorado.
 
-**Resultado esperado**: dentro de los 14 días posteriores a la inscripción, los usuarios mostrarán una mejor conversión en vistas de la página del producto (el evento `product_page`), instancias de agregar artículos al carrito de compras (`product_cart`) y compras (`purchase`). En cada etapa del embudo `product_page → product_cart → purchase`, habrá **al menos un 10% de aumento**.
 
 ## Habilidades Tecnológicas Utilizadas
 
@@ -38,16 +37,16 @@ Este proyecto fue un analisis para una tienda en línea internacional (anonima).
 ![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)
 
 
-## Contenidos
+## Etapas del proyecto
 
-1. Paso 1 - Importar librerías, cargar y revisar datasets
-2. Paso 2 - Limpiar y corregir datos
-3. Paso 3 - Análisis Exploratorio de Datos: Estudiar la conversión en las diferentes etapas del embudo
-4. Paso 4 - Evaluar resultados de la prueba A/B
-5. Paso 5 - Conclusiones y recomendaciones
+1. Importar librerías, cargar y revisar datasets
+2. Limpiar y corregir datos
+3. Análisis Exploratorio de Datos: Estudiar la conversión en las diferentes etapas del embudo
+4. Evaluar resultados de la prueba A/B
+5. Conclusiones y recomendaciones
 
 
-## Paso 3 - Estudiar la conversión en diferentes etapas del embudo
+## 3 - Análisis Exploratorio de Datos: Estudiar la conversión en diferentes etapas del embudo
 
 Las conversiones de ambos grupos son muy similares, sin embargo la conversión de grupo A (el grupo de control) es ligeramente mejor con un 34.07% de conversión en la etapa de compra, mientras que el grupo B se queda un poco por debajo con 32.37% de conversión. Estos resultados no son muy favorables para el nuevo embudo de pago.
 
@@ -56,32 +55,32 @@ Las conversiones de ambos grupos son muy similares, sin embargo la conversión d
 <img width="1238" height="699" alt="Conversion_gruposAB_output" src="https://github.com/user-attachments/assets/d1b6f52b-b9cb-4b1f-ba86-54b2509bbc95" />
 
 
-## Distribución de eventos por usuario
+## 3.1 - Distribución de eventos por usuario
 
 Las medias del grupo A y B son relativamente similares (`medias: A=7.46 y B=7.11`). Sin embargo la grafica de distribución de eventos por usuario muestra diferencias notables pese a que la forma o proporción de las distribuciones es similar. Finalmente la prueba nos arroga un resultado algo inesperado. El valor P es significativamente inferior a `alpha=0.05` lo que quiere decir que los grupos no están equilibrados. Debemos seguir explorando los datos para encontrar el motivo de desequilibrio.
 
 <img width="1790" height="490" alt="eventos_usuario_output" src="https://github.com/user-attachments/assets/a4b657b2-f46b-4859-999d-734bf8563e52" />
 
 
-## Distribución de eventos por día
+## 3.2  - Distribución de eventos por día
 
 El numero de eventos que suceden por día nos da información sobre la actividad de los usuarios durante el periodo estudiado. El registro comienza el 2020-12-07 y termina el 2020-12-30. El periodo de actividad mas alto fue del 7 de diciembre al 21 de diciembre, esto es probablemente debido a que durante estas fechas el experimento estuvo registrando nuevos usuarios. El 21 de diciembre el registro de nuevos usuarios finalizo. A partir de esa fecha vemos una caída gradual en el numero de eventos, lo que indica que la actividad de los usuarios fue disminuyendo.
 
 <img width="1247" height="545" alt="eventos_por_dia_output" src="https://github.com/user-attachments/assets/b281cbaa-bbec-415e-8a3e-f8d86fbe74b4" />
 
 
-## Paso 4 - Evaluación de resultados de la prueba A/B
+## 4 - Evaluación de resultados de la prueba A/B
 
 Anteriormente durante el análisis exploratorio descubrimos que las muestras de los grupos A y B no estan distribuidos equilibradamente, lo cual simplemente pudo ser un error de distribucion. Sin embargo despues detectamos que hay usuarios que están en ambos grupos, lo cual crea un problema muy grave ya que contamina la validez de la prueba. Entonces, para tratar de solucionar ese problema pensamos que la mejor solucion es eliminar los registros de esos usuarios duplicados, con el fin de tener datos experimentales lo mas limpios posible.
 
-## Conversión con datos limpios
+## 4.1 - Conversión con datos limpios
 
 <img width="1238" height="699" alt="conversion_datos_limpios_output" src="https://github.com/user-attachments/assets/1537b8ab-a05c-4bbe-a721-e9800e21194d" />
 
 
-## Paso 5 - Conclusiones
+## 5 - Conclusiones
 
-El proposito de la prueba fue probar los cambios relacionados con la introduccion de un sistema de recomendaciones mejorado. Se esperaban resultados de al menos un 10 % en cada etapa del embudo. Sin embargo las pruebas estadisticas no mostraron mejoras significativas. Tambien es probable que se hayan comprometido la validez de los datos de las pruebas pues encontramos usuarios que experimentaron ambas versiones del embudo, es decir, la nueva version del sistema de recomendacion y la version anterior. Aunque los usuarios de la prueba superaban los 6,000 participantes en ambos grupos y los usuarios que estaban en ambos grupos solo era 441, quiza porcion fue suficiente para alterar los resultados en el periodo de tiempo que se tomaron las pruebas. De cualquier forma lo que podemos asegurar es que la mejora esperada en las tasas de conversión no fue alcanzada.
+El propósito de la prueba fue probar los cambios relacionados con la introducción de un sistema de recomendaciones mejorado. Se esperaban resultados de al menos un 10 % en cada etapa del embudo. Sin embargo las pruebas estadísticas no mostraron mejoras significativas. También es probable que se hayan comprometido la validez de los datos de las pruebas pues encontramos usuarios que experimentaron ambas versiones del embudo, es decir, la nueva versión del sistema de recomendación y la versión anterior. Aunque los usuarios de la prueba superaban los 6,000 participantes en ambos grupos y los usuarios que estaban en ambos grupos solo era 441, quizá porción fue suficiente para alterar los resultados en el periodo de tiempo que se tomaron las pruebas. De cualquier forma lo que podemos asegurar es que la mejora esperada en las tasas de conversión no fue alcanzada.
 
 **Conclusiones**:
 
