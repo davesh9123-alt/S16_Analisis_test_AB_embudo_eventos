@@ -1,4 +1,4 @@
-# Proyecto: Nuevo embudo de pago - Análisis de pruebas A/B
+# Proyecto S16: Nuevo embudo de pago - Análisis de pruebas A/B
 
 Este proyecto fue un analisis para una tienda en línea internacional (anonima). El objetivo fue probar la eficacia de una nueva versión del Embudo de Pago, en concreto se busco verificar si el nuevo embudo genera al menos un 10% mas de conversión que el embudo anterior.
 
